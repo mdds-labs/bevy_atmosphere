@@ -1,6 +1,7 @@
 //! Provides types and data needed for rendering a skybox.
 
 use bevy::{
+    asset::weak_handle,
     pbr::{MaterialPipeline, MaterialPipelineKey},
     prelude::*,
     reflect::TypePath,
@@ -19,7 +20,7 @@ pub struct AtmosphereSkyBoxMaterial(pub Handle<SkyBoxMaterial>);
 
 /// The `Handle` for the shader for the [`SkyBoxMaterial`].
 pub const ATMOSPHERE_SKYBOX_SHADER_HANDLE: Handle<Shader> =
-    Handle::weak_from_u128(4511926918914205353);
+    weak_handle!("1347c9b7-c46a-48e7-b7b8-023a354b7cac");
 
 /// The `Material` that renders skyboxes.
 #[derive(AsBindGroup, TypePath, Debug, Clone, Asset)]
